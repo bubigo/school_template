@@ -4,12 +4,16 @@
   "description": "Template for repositories of pro course students",
   "author": "Aleh <olipskiy777@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "lint": "eslint '**/*.{js,jsx}'",
     "lint:fix": "eslint '**/*.{js,jsx}' --fix",
     "postinstall": "husky install"
   },
-  "dependencies": {},
+
+  "dependencies": {
+    "git": "^0.1.5"
+  },
   "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
