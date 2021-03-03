@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/extensions
 import { Builder } from './builder.js'
 
-function IntBuilder(value) {
+function IntBuilder(value = 0) {
   Builder.call(this, value)
 }
 IntBuilder.random = function random(min, max) {
@@ -33,7 +33,7 @@ IntBuilder.prototype.mod = function mod(n) {
 }
 
 IntBuilder.random(-10, 100)
-const intBuilder = new IntBuilder('10')
+const intBuilder = new IntBuilder(10)
 intBuilder.plus(2, 3, 2)
   .minus(1, 2)
   .multiply(2)

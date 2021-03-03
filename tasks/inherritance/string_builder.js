@@ -2,9 +2,12 @@
 import { Builder } from './builder.js'
 
 class StringBuilder extends Builder {
+  constructor(value = '') {
+    super(value)
+  }
+
   plus(...str) {
-    const addend = [...str].reduce((a, b) => a + b)
-    this.value += addend
+    this.value += [...str]
     return this
   }
 
