@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+  vertical-align: baseline;
+  border: none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+:root{
+  --accent-pr: #ffd700;
+  --accent-sec: #dc143c;
+}
+
+.hidden{
+  display:none;
+}
+.title-page {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.title-description {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: normal;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  background: url(https://img3.akspic.ru/originals/7/9/2/0/5/150297-gora-heshteg-poslesvechenie-voshod_solnca-zakat-1920x1080.jpg) 50% no-repeat;
+  background-size: cover;
+}
+.section{
+  width:80vw;
+  padding: 2rem;
+}
+.form{
+  margin-bottom:10vh;
+}
+.form-location{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 1em;
+  grid-template-areas:
+    "fieldset fieldset button";
+}
+.form-fieldset{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 1em;
+  grid-template-areas:
+    "input-country input-city";
+  grid-area: fieldset;
+}
+.country { grid-area: input-country; }
+.city { grid-area: input-city; }
+
+.form-input{
+  width: 100%;
+  border: .1rem solid var(--accent-pr);
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  color: #000;
+  background-color: rgba(0,0,0,.1);
+  font-weight: bold
+}
+.form-input::placeholder{
+  color: var(--accent-pr);
+}
+.form-btn-submit{
+  background-color: var(--accent-pr);
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+  color: #000;
+  grid-area: button;
+  font-weight: bold;
+}
+
+
+.form-btn-submit:hover{
+  background: #000;
+  color: #fff;
+}
+.form-btn-submit:active{
+  background: #000;
+  color: #fff;
+  filter: brightness(0.5);
+ }
+.weather {
+  background-color: rgba(0,0,0,.1);
+  border: .1rem solid #000;
+  border-radius: 1rem;
+}
+.weather-icon{
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 2rem;
+}
+.weather-icon,
+.weather-temperature,
+.weather-location{
+  text-align: center;
+}
+
+.weather-temperature{
+  font-size: 1.5rem;
+  color: var(--accent-pr);
+  font-weight: bold;
+  margin-bottom:0.5rem;
+}
+.weather-location{
+  color:#000;
+  font-weight: bold;
+  margin-bottom:2rem;
+}
+.weather-parameters {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: stretch;
+   grid-gap: 1rem 0;
+   text-align:center;
+   color: #fff;
+ }
+.param{
+  filter: drop-shadow(2px 4px 4px #000);
+}
+.param:not(:nth-child(3n)) {
+  border-right: 2px solid #000;
+}
+.error {
+  text-align: center;
+  font-size: 5vw;
+  color: var(--accent-sec);
+}
+
