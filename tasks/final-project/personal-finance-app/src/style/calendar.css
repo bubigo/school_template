@@ -1,0 +1,33 @@
+.ant-picker-calendar-mini .ant-picker-panel,
+.ant-picker-calendar.ant-picker-calendar-mini {
+  border-radius: .5rem .5rem 0 0;
+}
+.ant-picker-calendar.ant-picker-calendar-mini {
+  padding: .5rem;
+  box-shadow: 0 0 3rem 0 #675477;
+  background:var(--bg-light);
+  border-bottom: 1px solid var(--bg-overlay-dark);
+}
+.ant-picker-calendar .ant-picker-panel {
+  background: var(--bg-light);
+}
+.ant-picker-calendar-header {
+  background:linear-gradient(145deg, #675477 12%, #b86881 61%, #f3a88f 100%);
+  border-radius: .5rem;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner{
+  background: #675477;
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 1px solid #675477;
+}
+.ant-radio-group.ant-radio-group-outline.ant-radio-group-small.ant-picker-calendar-mode-switch {
+  display: none;
+}
+.ant-select {
+  width: 50%;
+}
+.ant-picker-calendar-header {
+  padding: 8px 0;
+}

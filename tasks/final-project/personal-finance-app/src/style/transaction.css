@@ -1,0 +1,109 @@
+.history_item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr .5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0 .5em;
+  gap: 0 .5em;
+  grid-template-areas:
+        "history_category history_delete"
+        "history_date history_spend";
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.4em;
+  border-radius: 0.5rem;
+  background-color: var(--bg-overlay-dark);
+}
+.history_payment{
+  background-color:var(--payment);
+}
+.history_income{
+  background-color:var(--income);
+}
+.history_category {
+  font-size:1rem;
+  text-transform: capitalize;
+  color: var(--text-light);
+}
+.history_delete {
+  grid-area: history_delete;
+  justify-self: end;
+  width: fit-content;
+  padding: 0;
+  font-weight: 700;
+  border:none;
+  background: transparent;
+  color: var(--text-light);
+}
+.history_delete:hover{
+  transform: scale(1.5);
+  transition: all 500ms;
+  background: transparent;
+  color: var(--text-light);
+}
+.history_spend{
+  grid-area: history_spend;
+  font-weight: 700;
+  color: var(--text-light);
+  font-size: 1rem;
+  text-align: right;
+}
+.history_category {
+  grid-area: history_category;
+  width: fit-content;
+  text-transform: capitalize;
+  font-weight: 700;
+  border-radius: 0.5em;
+}
+.history_date {
+  grid-area: history_date;
+  color: var(--text-light);
+  font-weight: 700;
+  font-size:0.8rem;
+}
+.daily-report-list {
+  border-radius: 0 0 .5rem .5rem;
+  background: var(--bg-light);
+  /* max-height: 30vh; */
+  /* overflow-y: scroll; */
+  margin-right: 0;
+  padding: 1rem;
+}
+.transaction-list_title {
+  color: var(--text-accent);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+.transaction-list {
+  margin-bottom: 0;
+}
+/* padding-right: 0.5em;
+}
+/* полоса прокрутки (скроллбар) */
+.daily-report-list::-webkit-scrollbar {
+  width: 0.3rem;
+  margin:0 5px;
+  border-radius: 2rem;
+  background-color: var(--bg-light);
+}
+/* ползунок скроллбара */
+.daily-report-list::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  text-align: center;
+  border-radius: .5rem;
+  border: 1px solid var(--text-light);
+  background-color: var(--text-accent);
+}
+/* Стрелки */
+.daily-report-list::-webkit-scrollbar-button:vertical:start:decrement {
+  display:none;
+}
+.transaction-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.date-picker-custom {
+  background: var(--bg-light);
+  border-radius: .5rem .5rem 0 0;
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+
+.navbar {
+  padding: 2rem 1rem;
+  background: var(--navbar);
+}
+.navbar-list{
+  display: grid;
+  gap: 1rem;
+
+}
+.navbar-icon{
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0 3rem 0 var(--text-accent);
+}
+.navbar-icon:hover {
+  box-shadow: 0 0 .5rem 3px var(--text-light);
+}
+button.btn-all-transactions {
+  padding: 0;
+  background: transparent;
+}

@@ -1,0 +1,29 @@
+.layout{
+  display:flex;
+  min-height:100vh;
+  background-color: #675477;
+  background-image: linear-gradient(180deg, #675477 12%, #b86881 61%, #f3a88f 100%);
+
+}
+.content{
+  width:100%;
+}
+.main{
+  display: grid;
+  grid-gap:2rem;
+  padding: 2rem;
+  grid-template-columns: 300px 1fr;
+
+}
+
+
+.daily-report-list {
+  list-style: none;
+  padding: 0;
+}
+.daily-report-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.site-card-border-less-wrapper {
+  filter: drop-shadow(2px 4px 6px #ecf0f3);
+}
