@@ -1,7 +1,5 @@
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+import { connect } from 'react-redux'
+import { mapStateToProps } from '../reducersRedux'
 
 const _react = _interopRequireDefault(require('react'))
 
@@ -9,26 +7,24 @@ const _charts = require('@ant-design/charts')
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const PieChart = () => {
-  const data = [{
-    type: 'Cat 1',
-    value: 27
-  }, {
-    type: 'Cat 2',
-    value: 25
-  }, {
-    type: 'Cat 3',
-    value: 18
-  }, {
-    type: 'Cat 4',
-    value: 15
-  }, {
-    type: 'Cat 5',
-    value: 10
-  }, {
-    type: 'Other',
-    value: 5
-  }]
+const PieChartContainer = (props) => {
+  let total = props.paymentMapState.reduce((sum, item) => {
+    return sum + item.payment
+  }, 0)
+
+    const data = props.categoryMapState.map((category) => {
+    let totalCategory = props.paymentMapState.reduce((sum, item) => {
+      return sum + (item.category === category.id ? item.payment :0)
+    }, 0)
+    let totalSection = ((totalCategory * 100) / (total*100))*100
+    let value = total > 0 ? Math.round(totalSection) : 0
+
+    return {
+      type: category.name,
+      value: value
+    }
+  })
+
   const config = {
     appendPadding: 10,
     data: data,
@@ -40,7 +36,7 @@ const PieChart = () => {
     label: {
       type: 'inner',
       offset: '-50%',
-      content: '{value}',
+      content: '{value}%',
       style: {
         textAlign: 'center',
         fontSize: 14
@@ -63,7 +59,8 @@ const PieChart = () => {
     }
   }
   return /*#__PURE__*/_react.default.createElement(_charts.Pie, config);
-};
+}
 
-const _default = PieChart;
-exports.default = _default;
+export const PieChartCmp = connect(
+  mapStateToProps,
+)(PieChartContainer)
