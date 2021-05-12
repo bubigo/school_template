@@ -1,0 +1,62 @@
+.cost__categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem,1fr));
+  grid-gap:4rem;
+  align-items: baseline;
+  justify-items: center;
+}
+.cost__category {
+  position:relative;
+  padding:1rem;
+  text-align: center;
+  width:100%;
+}
+.cost__category:nth-child(n+6):hover .cost__category_delete{
+  display: block;
+  right: -1rem;
+  top: -1rem;
+  position: absolute;
+background: transparent;
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+.cost__category:nth-child(n+6):hover{
+  border-radius: .5rem;
+  background: var(--bg-overlay-dark);
+}
+.category-btn {
+  box-shadow: 0 0 3rem 0 var(--text-accent);
+  font-size: 1.5rem;
+  color: var(--text-accent);
+  background: var(--bg-light);
+  width: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+}
+.category-btn:hover{
+  box-shadow: 0 0 .5rem 3px var(--text-light)
+}
+.add-category-btn:hover {
+  box-shadow: 0 0 .5rem 3px var(--text-light);
+}
+.cost__category_delete {
+display: none;
+}
+.cost__category_delete:hover {
+transform: scale(1.5);
+  transition:all 500ms;
+}
+.category-name {
+padding: 0 0.5rem;
+color: var(--text-light);
+text-transform: capitalize;
+}
+.spend{
+color: var(--text-light);
+}
+
+
+.add-category-modal input:first-child {
+  margin-bottom: 1rem;
+}

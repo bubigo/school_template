@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v2
+        uses: actionsRedux/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actionsRedux/setup-node@v1
         with:
           node-version: 12
 
